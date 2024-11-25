@@ -66,7 +66,7 @@ const SignUpPage = () => {
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <Mail className="h-5 w-5 text-gray-400" aria-hidden="true" />
                 </div>
                 <input
                   id="email"
@@ -88,7 +88,7 @@ const SignUpPage = () => {
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <Lock className="h-5 w-5 text-gray-400" aria-hidden="true" />
                 </div>
                 <input
                   id="password"
@@ -110,7 +110,7 @@ const SignUpPage = () => {
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <User className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                  <Lock className="h-5 w-5 text-gray-400" aria-hidden="true" />
                 </div>
                 <input
                   id="confirmPassword"
@@ -137,20 +137,20 @@ const SignUpPage = () => {
               {loading ? (
                 <>
                   <Loader className="mr-2 h-5 w-5 animate-spin" aria-hidden="true" />
-                  <span>Loading...</span>
+                  Loading...
                 </>
               ) : (
                 <>
                   <UserPlus className="mr-2 h-5 w-5" aria-hidden="true" />
-                  <span>Sign Up</span>
+                  Sign Up
                 </>
               )}
             </button>
           </form>
           <p className="mt-8 text-center text-sm text-gray-400">
-            <span>Already have an account?</span>{" "}
+            Already have an account?{" "}
             <Link to="/login" className="font-medium text-emerald-400 hover:text-emerald-300">
-              <span>Login Here</span>{" "}
+              Login Here{" "}
               <ArrowRight className="inline h-4 w-4" />
             </Link>
           </p>
