@@ -35,7 +35,9 @@ const orderSchema = new mongoose.Schema(
 			type: String,
 			unique: true,
 		},
-	}, { timestamps: true });
+	},
+	{ timestamps: true }
+);
 
 const Order = mongoose.model("Order", orderSchema);
 
