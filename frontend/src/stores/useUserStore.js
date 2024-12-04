@@ -28,12 +28,14 @@ export const useUserStore = create((set, get) => ({
 
 		try {
 			const res = await axios.post("/auth/login", { email, password });
+
 			set({ user: res.data, loading: false });
 		} catch (error) {
 			set({ loading: false });
 			toast.error(error.response.data.message || "An error occurred");
 		}
 	},
+
 	logout: async () => {
 		try {
 			await axios.post("/auth/logout");
@@ -42,6 +44,7 @@ export const useUserStore = create((set, get) => ({
 			toast.error(error.response?.data?.message || "An error occurred during logout");
 		}
 	},
+
 	checkAuth: async () => {
 		set({ checkingAuth: true });
 		try {
@@ -52,6 +55,7 @@ export const useUserStore = create((set, get) => ({
 			set({ checkingAuth: false, user: null });
 		}
 	},
+
 	refreshToken: async () => {
 		// Prevent multiple simultaneous refresh attempts
 		if (get().checkingAuth) return;
